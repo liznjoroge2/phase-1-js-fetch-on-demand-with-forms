@@ -13,8 +13,12 @@ const init = () => {
   
           title.innerText = data.title;
           summary.innerText = data.summary;
+        })
+        .catch((error) => {
+          console.error('Error:', error);
         });
     });
   };
   
   document.addEventListener("DOMContentLoaded", init);
+  
